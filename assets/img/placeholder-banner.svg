@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2100 900">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0a0b"/><stop offset="1" stop-color="#111318"/>
+    </linearGradient>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#14c56e" stop-opacity=".6"/><stop offset="1" stop-color="#1fe07f" stop-opacity=".25"/>
+    </linearGradient>
+  </defs>
+  <rect width="2100" height="900" rx="32" fill="url(#g)"/>
+  <g fill="none" stroke="url(#a)" opacity=".7">
+    <path d="M0 650 C 500 520 900 560 1300 620 S 1900 760 2100 620" stroke-width="12"/>
+    <path d="M0 740 C 500 590 900 640 1300 700 S 1900 840 2100 700" stroke-width="6"/>
+    <path d="M0 560 C 500 450 900 480 1300 540 S 1900 680 2100 540" stroke-width="4"/>
+  </g>
+  <g fill="#e8e9ee" opacity=".7" font-family="system-ui, -apple-system, Segoe UI, Roboto" font-size="64">
+    <text x="80" y="160">BANNER SUBSTITUÍVEL (21:9)</text>
+    <text x="80" y="250" fill="#b7bac5" font-size="40">Troque este arquivo por uma imagem real do projeto/serviço</text>
+  </g>
+</svg>
