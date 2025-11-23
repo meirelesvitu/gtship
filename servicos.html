@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>GT Ship - Serviços</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0a0a0b">
+  <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/main.js"></script>
+  <meta name="description" content="Serviços — GT Ship">
+</head>
+<body>
+
+  <header class="site-header" data-elevate>
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Página inicial">
+        <img src="assets/icons/logo.svg" alt="" width="90" height="90" aria-hidden="true">      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+      <nav id="site-nav" class="site-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quem-somos.html">Quem Somos</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="parceria.html">Parceria</a></li>
+          <li><a href="area-do-colaborador.html">Área do Colaborador</a></li>
+        </ul>
+        <a class="btn btn--primary" href="contato.html">Fale conosco</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <nav class="breadcrumbs"><a href="index.html">Home</a> › Serviços</nav>
+        <header class="section__head" data-animate="up">
+          <h1>Serviços</h1>
+          <p>Conte com especialistas para manter sua operação fluindo.</p>
+        </header>
+        <div class="cards" data-animate="up">
+          <article class="card">
+            <figure class="media-slot" data-slot="servico-1" style="--ratio: 16/9"><img src="assets/img/6.JPG" alt="Apoio Administrativo (imagem substituível)"></figure>
+            <h3>Apoio Administrativo</h3>
+            <p>Recepção, portaria, atendimento, controle de acesso e apoio a rotinas de backoffice.</p>
+          </article>
+          <article class="card">
+            <figure class="media-slot" data-slot="servico-2" style="--ratio: 16/9"><img src="assets/img/4.jpeg" alt="Conservação e Limpeza (imagem substituível)"></figure>
+            <h3>Conservação e Limpeza</h3>
+            <p>Limpeza diária e periódica, conservação de áreas comuns e gestão de insumos.</p>
+          </article>
+          <article class="card">
+            <figure class="media-slot" data-slot="servico-3" style="--ratio: 16/9"><img src="assets/img/5.jpg" alt="Logística de Pessoal (imagem substituível)"></figure>
+            <h3>Logística de Pessoal</h3>
+            <p>Movimentação e apoio operacional de equipes, mensageria e atividades correlatas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <figure class="media-slot" data-slot="servicos-banner" style="--ratio: 21/11">
+          <img src="assets/img/10.png" alt="Banner de Serviços (substituir)">
+        </figure>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container footer-flex">
+      <div class="footer-info">
+        <p style="color:var(--text-3)">GT SHIP OFFSHORE COMÉRCIO E SERVIÇOS LTDA · CNPJ 05.981.211/0001-76
+          <br>
+          © <span id="year"></span> GT Ship. Todos os direitos reservados.
+        </p>
+      </div>
+      <div class="footer-social">
+        <div style="font-weight:bold;">Redes sociais</div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <a href="https://instagram.com/gtship.facilities" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="assets/icons/instagram.png" alt="Instagram" width="28" height="28" style="display:inline-block;vertical-align:middle;">
+          </a>
+          <a href="https://www.linkedin.com/company/gtship/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <img src="assets/icons/linkedin.png" alt="LinkedIn" width="28" height="28" style="display:inline-block;vertical-align:middle;">
+          </a>
+        </div>
+      </div>
+    </div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+  <button id="to-top" class="to-top" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 5l-7 7h4v7h6v-7h4z" fill="currentColor"/></svg>
+  </button>
+
+</body>
+</html>

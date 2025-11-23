@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>GT Ship - Parceria</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0a0a0b">
+  <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/main.js"></script>
+  <meta name="description" content="Parceria — GT Ship">
+</head>
+<body>
+
+  <header class="site-header" data-elevate>
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Página inicial">
+        <img src="assets/icons/logo.svg" alt="" width="90" height="90" aria-hidden="true">      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+      <nav id="site-nav" class="site-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quem-somos.html">Quem Somos</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="parceria.html">Parceria</a></li>
+          <li><a href="area-do-colaborador.html">Área do Colaborador</a></li>
+        </ul>
+        <a class="btn btn--primary" href="contato.html">Fale conosco</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <nav class="breadcrumbs"><a href="index.html">Home</a> › Parceria</nav>
+        <header class="section__head" data-animate="up">
+          <h1>Parceria</h1>
+          <p>Relações de longo prazo, com metas claras e comunicação transparente.</p>
+        </header>
+        <div class="cards" data-animate="up">
+          <article class="card">
+            <p>Seja um parceiro da GT Ship fazendo parte do nosso time de colaboradores. As possibilidades de crescimento profissional são ilimitadas. Nossa empresa está em constante movimentação e sempre atenta às oportunidades e necessidades do mercado, por isso, sempre estamos em constante crescimento, e para isso, contamos com uma equipe altamente preparada e entrozada. Venha fazer parte do nosso mundo. Preencha o formulário envie-nos o seu currículo clicando no botão abaixo.</p>
+            <a class="btn btn--ghost" href="contato.html">Fale com nosso time</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: stretch;">
+          <!-- Bloco Esquerdo: Texto -->
+          <div style="flex: 1 1 320px; min-width: 280px; display: flex; flex-direction: column; justify-content: center;">
+            <header class="section__head">
+              <h2>Nossos Parceiros</h2>
+              <p>Sempre temos a satisfação de mencionar que ao longo de nossa jornada conquistamos um espaço de respeito por onde passamos. Com isso produzimos bons relacionamentos comerciais, e até mesmo evoluindo para relacionamentos interpessoais. O nosso legado é implantar uma cultura de respeito mútuo e crescimento saudável, objetivando cada vez mais oportunidades no universo corporativo.</p>
+            </header>
+          </div>
+          <!-- Bloco Direito: Carrossel -->
+          <div style="flex: 1 1 320px; min-width: 280px; display: flex; align-items: center; justify-content: center;">
+            <div id="carousel-parceiros" style="position: relative; width: 100%; max-width: 400px;">
+              <img id="carousel-img" src="assets/img/parceiro1.jpg" alt="Parceiro 1" style="width: 100%; border-radius: 12px; box-shadow: 0 2px 12px #0003; object-fit: cover; height: 70%;">
+            </div>
+            <script>
+              (function() {
+                const images = [
+                  'assets/img/John_Cockerill_logo.svg',
+                  'assets/img/expro.svg',
+                  'assets/img/tecnofine_logo.svg',
+                  'assets/img/aliminas_logo_sem_fundo.svg'
+                ];
+                const alts = [
+                  'Parceiro 1',
+                  'Parceiro 2',
+                  'Parceiro 3',
+                  'Parceiro 4'
+                ];
+                let idx = 0;
+                const img = document.getElementById('carousel-img');
+                setInterval(function() {
+                  idx = (idx + 1) % images.length;
+                  img.src = images[idx];
+                  img.alt = alts[idx];
+                }, 3000);
+              })();
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container footer-flex">
+      <div class="footer-info">
+        <p style="color:var(--text-3)">GT SHIP OFFSHORE COMÉRCIO E SERVIÇOS LTDA · CNPJ 05.981.211/0001-76
+          <br>
+          © <span id="year"></span> GT Ship. Todos os direitos reservados.
+        </p>
+      </div>
+      <div class="footer-social">
+        <div style="font-weight:bold;">Redes sociais</div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <a href="https://instagram.com/gtship.facilities" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="assets/icons/instagram.png" alt="Instagram" width="28" height="28" style="display:inline-block;vertical-align:middle;">
+          </a>
+          <a href="https://www.linkedin.com/company/gtship/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <img src="assets/icons/linkedin.png" alt="LinkedIn" width="28" height="28" style="display:inline-block;vertical-align:middle;">
+          </a>
+        </div>
+      </div>
+    </div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+  <button id="to-top" class="to-top" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 5l-7 7h4v7h6v-7h4z" fill="currentColor"/></svg>
+  </button>
+
+</body>
+</html>

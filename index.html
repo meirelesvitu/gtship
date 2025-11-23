@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>GT Ship - Home</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0a0a0b">
+  <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/main.js"></script>
+  <meta name="description" content="Home — GT Ship">
+</head>
+<body>
+
+  <header class="site-header" data-elevate>
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Página inicial">
+        <img src="assets/icons/logo.svg" alt="" width="100" height="100" aria-hidden="true">
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+      <nav id="site-nav" class="site-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quem-somos.html">Quem Somos</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="parceria.html">Parceria</a></li>
+          <li><a href="area-do-colaborador.html">Área do Colaborador</a></li>
+        </ul>
+        <a class="btn btn--primary" href="contato.html">Fale conosco</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy" data-animate="up">
+          <h1>Juntos somos <span style="color:var(--accent)">mais fortes</span>.</h1>
+          <p>Tradição e inovação para simplificar o seu dia a dia corporativo com qualidade, eficiência e respeito ao ambiente.</p>
+          <div class="hero__cta">
+            <a class="btn btn--ghost" href="servicos.html">Conhecer serviços</a>
+            <a class="btn btn--ghost" href="quem-somos.html">Quem somos</a>
+          </div>
+        </div>
+        <figure class="media-slot" data-slot="home-hero" style="--ratio: 21/13; flex: 3 1 1200px; max-width: 2200px; margin-left: 2rem;" aria-label="Banner da Home">
+          <!-- Substitua a imagem abaixo -->
+          <img src="assets/img/1.jpg" alt="Banner substituível — Home" style="width:100%; height:100%; object-fit:cover; border-radius: 18px; box-shadow: 0 4px 32px #0002;">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: stretch;">
+          <!-- Bloco Esquerdo: Texto -->
+          <div style="flex: 1 1 320px; min-width: 260px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+            <header class="section__head" style="text-align: left;">
+              <h2>Descomplique</h2>
+              <p>Prezamos pela qualidade de nossos serviços, para fazer nossos clientes satisfeitos. Contamos com equipes altamente treinadas, com profissionais selecionados de forma criteriosa para assegurar os melhores resultados na entrega de nossos serviços e com menor impacto ao ambiente. Nossos funcionários são bem capacitados para executar os trabalhos de acordo com as normas dos nossos clientes, e assim estabelecendo uma relação de confiança, respeito e reciprocidade. Ajudamos a conservar seu ambiente por muito mais tempo. Aqui suas atividades diárias de conservação e apoio corporativo estarão em boas mãos.</p>
+            </header>
+          </div>
+          <!-- Bloco Direito: Imagem Única -->
+          <div style="flex: 1 1 320px; min-width: 260px; display: flex; align-items: center; justify-content: center;">
+            <figure class="media-slot" data-slot="home-case-destaque" style="--ratio: 4/3; margin:0;">
+              <img src="assets/img/8.png" alt="Case em destaque (substituir)">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container footer-flex">
+      <div class="footer-info">
+        <p style="color:var(--text-3)">GT SHIP OFFSHORE COMÉRCIO E SERVIÇOS LTDA · CNPJ 05.981.211/0001-76
+          <br>
+          © <span id="year"></span> GT Ship. Todos os direitos reservados.
+        </p>
+      </div>
+      <div class="footer-social">
+        <div style="font-weight:bold;">Redes sociais</div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <a href="https://instagram.com/gtship.facilities" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="assets/icons/instagram.png" alt="Instagram" width="28" height="28" style="display:inline-block;vertical-align:middle;">
+          </a>
+          <a href="https://www.linkedin.com/company/gtship/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <img src="assets/icons/linkedin.png" alt="LinkedIn" width="28" height="28" style="display:inline-block;vertical-align:middle;">
+          </a>
+        </div>
+      </div>
+    </div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+  <button id="to-top" class="to-top" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 5l-7 7h4v7h6v-7h4z" fill="currentColor"/></svg>
+  </button>
+
+</body>
+</html>
