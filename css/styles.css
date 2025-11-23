@@ -1,0 +1,163 @@
+/* ========== GT Ship — Tema dark multipágina (com *image slots*) ========== */
+:root{
+  --bg-0:#0a0a0b; --bg-1:#0f1012; --bg-2:#15161a; --line:#23252c;
+  --text-1:#e8e9ee; --text-2:#b7bac5; --text-3:#8f93a1;
+  --accent:#50F205; --accent-2:#39b400; --accent-contrast:#07180e;
+  --radius:14px; --radius-sm:10px; --container:1200px;
+  --step--1:clamp(.85rem,.82rem + .2vw,.95rem);
+  --step-0:clamp(1rem,.96rem + .35vw,1.125rem);
+  --step-1:clamp(1.25rem,1.15rem + .7vw,1.6rem);
+  --step-2:clamp(1.6rem,1.45rem + 1.2vw,2.1rem);
+  --step-3:clamp(2rem,1.7rem + 1.8vw,2.7rem);
+  --step-4:clamp(2.6rem,2.1rem + 2.6vw,3.5rem);
+}
+
+@media (prefers-color-scheme: dark){:root{color-scheme:dark}}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{
+  margin:0; font:400 var(--step-0)/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  color:var(--text-2);
+  background:
+    radial-gradient(1200px 600px at 85% -35%, color-mix(in oklab, var(--accent), transparent 92%), transparent 60%),
+    radial-gradient(1200px 600px at 0% 0%, color-mix(in oklab, var(--accent), transparent 92%), transparent 60%),
+    var(--bg-0);
+  min-height:100vh;
+}
+img,svg{max-width:100%; height:auto; display:block}
+a{color:var(--text-1); text-decoration:none} a:hover{color:var(--accent)}
+::selection{background:var(--accent); color:var(--accent-contrast)}
+:focus-visible{outline:3px solid var(--accent); outline-offset:2px}
+.container{width:min(100% - 2rem, var(--container)); margin-inline:auto}
+
+.section{padding:4rem 0; border-top:1px solid color-mix(in oklab, var(--line), transparent 35%)}
+.section--alt{background:linear-gradient(180deg, color-mix(in oklab, var(--bg-1), transparent 8%), transparent 92%)}
+.section__head{max-width:70ch; margin-bottom:1.2rem}
+.section__head h1, .section__head h2{font-size:var(--step-2); color:var(--text-1); margin:0 0 .4rem}
+.section__head p{margin:0; color:var(--text-3)}
+
+.site-header{position:sticky; top:0; z-index:40; backdrop-filter:blur(10px);
+  background:color-mix(in oklab, var(--bg-0), transparent 20%);
+  border-bottom:1px solid color-mix(in oklab, var(--line), transparent 20%);
+  transition:box-shadow .25s ease}
+.site-header.is-elevated{box-shadow:0 2px 10px rgba(0,0,0,.45)}
+.nav-wrap{display:flex; align-items:center; justify-content:space-between; min-height:64px; gap:1rem}
+.brand{display:inline-flex; align-items:center; gap:.6rem; font-weight:700; color:var(--text-1)}
+.site-nav{display:flex; align-items:center; gap:.6rem}
+.site-nav ul{display:flex; list-style:none; gap:.5rem; padding:0; margin:0}
+.site-nav a{padding:.5rem .75rem; border-radius:.75rem}
+.site-nav a:hover{background:color-mix(in oklab, var(--accent), transparent 85%); color:var(--accent)}
+.site-nav a[aria-current="page"]{background:color-mix(in oklab, var(--accent), transparent 85%); color:var(--accent)}
+.nav-toggle{display:none; width:44px; height:44px; border-radius:10px; border:1px solid var(--line); background:var(--bg-2); color:var(--text-1)}
+.nav-toggle:hover{border-color:color-mix(in oklab, var(--accent), var(--line) 70%); color:var(--accent)}
+@media (max-width:880px){
+  .nav-toggle{display:inline-grid; place-items:center}
+  .site-nav{position:fixed; inset:64px 0 auto 0; background:var(--bg-1); border-bottom:1px solid var(--line);
+    flex-direction:column; padding:1rem; gap:1rem; transform:translateY(-120%); transition:transform .2s ease}
+  .site-nav.is-open{transform:translateY(0)}
+  .site-nav ul{flex-direction:column; width:100%}
+  .site-nav a{width:100%}
+}
+
+/* Botões */
+.btn{--btn-bg:var(--bg-2); --btn-fg:var(--text-1); --btn-border:var(--line);
+  display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+  padding:.85rem 1rem; border-radius:var(--radius-sm); border:1px solid var(--btn-border);
+  background:var(--btn-bg); color:var(--btn-fg); font-weight:600; transition:.2s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn--primary{--btn-bg:linear-gradient(180deg, var(--accent), color-mix(in oklab, var(--accent-2), var(--accent) 50%));
+  --btn-fg:var(--accent-contrast); --btn-border:color-mix(in oklab, var(--accent), black 15%);
+  box-shadow:0 8px 20px rgba(20,197,110,.25)}
+.btn--ghost{background:transparent; border-color:color-mix(in oklab, var(--accent), transparent 90%); color:var(--text-1)}
+
+/* Cards e grids */
+.cards{display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:1rem}
+.card{background:linear-gradient(180deg, color-mix(in oklab, var(--bg-2), transparent 0%), color-mix(in oklab, black, transparent 85%));
+  border:1px solid var(--line); border-radius:var(--radius); padding:1rem; box-shadow:0 8px 30px rgba(0,0,0,.35)}
+
+/* ========== Image Slots (blocos substituíveis) ==========
+   Use <figure class="media-slot" data-slot="nome" style="--ratio: 21/9"><img src="..." alt="..."></figure>
+   - --ratio aceita frações: 16/9, 4/3, 1/1 etc.
+   - Troque apenas o src do <img> por sua imagem.
+*/
+.media-slot{border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;
+  background:linear-gradient(180deg, var(--bg-2), color-mix(in oklab, var(--bg-1), transparent 10%)); 
+  aspect-ratio: var(--ratio, 16/9); display:grid; place-items:center; box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.media-slot img{width:100%; height:100%; object-fit:cover}
+.media-slot figcaption{padding:.6rem; font-size:var(--step--1); color:var(--text-3); border-top:1px solid var(--line)}
+
+.media-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:1rem}
+
+/* Hero */
+.hero{padding: clamp(2rem, 6vw, 6rem) 0 3rem;}
+.hero__grid{display:grid; grid-template-columns:1.1fr .9fr; gap: clamp(1rem, 3vw, 2rem); align-items:center}
+.hero__copy h1{font-size: var(--step-4); color:var(--text-1); margin:0 0 .8rem}
+.hero__copy p{font-size: var(--step-1); color:var(--text-3); margin:0 0 1.2rem}
+.hero__cta{display:flex; gap:.6rem; flex-wrap:wrap}
+@media (max-width:1024px){.hero__grid{grid-template-columns:1fr}}
+
+/* Breadcrumbs */
+.breadcrumbs{display:flex; flex-wrap:wrap; gap:.5rem; font-size:var(--step--1); color:var(--text-3); margin:.2rem 0 1rem}
+.breadcrumbs a{color:var(--text-2)} .breadcrumbs a:hover{color:var(--accent)}
+
+/* Footer e utilidades */
+.site-footer{padding:2rem 0; border-top:1px solid var(--line); background:color-mix(in oklab, var(--bg-1), transparent 5%)}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.footer-info {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+.footer-social {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: .3rem;
+}
+@media (max-width: 700px) {
+  .footer-flex {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.2rem;
+  }
+  .footer-social {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+.to-top{position:fixed; right:1rem; bottom:1rem; width:44px; height:44px; border:1px solid var(--line); border-radius:12px; background:var(--bg-2);
+  display:grid; place-items:center; opacity:0; transform:translateY(6px); transition:.2s ease}
+.to-top.is-show{opacity:1; transform:none}
+[data-animate]{opacity:0; transform:translateY(8px); transition:opacity .45s ease, transform .5s ease}
+[data-animate].is-inview{opacity:1; transform:none}
+/* Formulário de contato empilhado (campos um abaixo do outro) */
+.form-stack{
+  display: grid;
+  grid-template-columns: 1fr;   /* uma coluna */
+  gap: .8rem;                   /* espaço entre os campos */
+}
+
+.form-stack label{
+  display: grid;                /* label em cima, campo embaixo */
+  gap: .35rem;
+  justify-items: start;
+  text-align: left;
+}
+
+.form-stack input,
+.form-stack textarea{
+  width: 100%;                  /* ocupa toda a largura do card */
+}
+
+.form-stack button{
+  justify-self: start;          /* botão alinhado à esquerda */
+}
+
