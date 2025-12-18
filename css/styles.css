@@ -161,3 +161,51 @@ a{color:var(--text-1); text-decoration:none} a:hover{color:var(--accent)}
   justify-self: start;          /* botão alinhado à esquerda */
 }
 
+/* Página interativa SIM x NÃO */
+body.escape-page{
+  background:#000;
+  color:#f8fafc;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.escape-shell{
+  width:min(960px, 100% - 2rem);
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  gap:1.5rem;
+  margin-inline:auto;
+  padding:clamp(1.5rem, 4vw, 3rem);
+}
+
+.escape-question{
+  color:#fff;
+  font-size:var(--step-3);
+  margin:0;
+}
+
+.escape-actions{
+  display:flex;
+  gap:.85rem;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.escape-page .btn{
+  min-width:120px;
+  box-shadow:0 0 0 transparent;
+}
+
+.escape-no{
+  cursor:pointer;
+  will-change:transform, left, top;
+}
+
+.escape-no.is-floating{
+  position:fixed;
+  z-index:60;
+}
